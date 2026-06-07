@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6x26ddb373e"]
+[gd_scene load_steps=4 format=3 uid="uid://b6x26ddb373e"]
 
 [ext_resource type="Texture2D" uid="uid://djf7df3wvoume" path="res://icon.svg" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://dpr5eitdm7673" path="res://player.gd" id="1_onrkg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sh265"]
 animations = [{
@@ -14,6 +15,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(567.00006, 235.00002)
@@ -27,3 +29,7 @@ offset_top = 100.77827
 offset_right = 49.80568
 offset_bottom = 123.77827
 text = "is this good?"
+
+[node name="RootMotionView" type="RootMotionView" parent="AnimatedSprite2D/Label"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
