@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6x26ddb373e"]
+
+[ext_resource type="Texture2D" uid="uid://djf7df3wvoume" path="res://icon.svg" id="1_4flbx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sh265"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4flbx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(567.00006, 235.00002)
+scale = Vector2(6.59375, 1.7265625)
+sprite_frames = SubResource("SpriteFrames_sh265")
+frame_progress = 0.20372863
+
+[node name="Label" type="Label" parent="AnimatedSprite2D"]
+offset_left = -45.19432
+offset_top = 100.77827
+offset_right = 49.80568
+offset_bottom = 123.77827
+text = "is this good?"
