@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6x26ddb373e"]
+
+[ext_resource type="Texture2D" uid="uid://djf7df3wvoume" path="res://icon.svg" id="1_4flbx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sh265"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4flbx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(263, 178)
+sprite_frames = SubResource("SpriteFrames_sh265")
+frame_progress = 0.20372863
